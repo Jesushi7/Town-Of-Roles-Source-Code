@@ -1,4 +1,4 @@
-/*using HarmonyLib;
+using HarmonyLib;
 using TownOfUs.CustomOption;
 using TownOfUs.Extensions;
 using UnityEngine;
@@ -91,4 +91,4 @@ namespace TownOfUs.NeutralRoles.VultureMod
             }
         }
     }
-}*/
+}

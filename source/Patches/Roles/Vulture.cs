@@ -1,4 +1,4 @@
-/*using System;
+using System;
 using Hazel;
 using System.Collections.Generic;
 using TownOfUs.CustomOption;
@@ -96,4 +96,4 @@ namespace TownOfUs.Roles
             BodyArrows.Remove(arrow.Key);
         }
     }
-}*/
+}

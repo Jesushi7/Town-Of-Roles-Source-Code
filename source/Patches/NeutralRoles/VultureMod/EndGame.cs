@@ -1,4 +1,4 @@
-/*using HarmonyLib;
+using HarmonyLib;
 using Hazel;
 using TownOfUs.Patches;
 using TownOfUs.Roles;
@@ -26,4 +26,4 @@ namespace TownOfUs.NeutralRoles.VultureMod
             return true;
         }
     }
-}*/
+}

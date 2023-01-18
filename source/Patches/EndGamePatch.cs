@@ -53,7 +53,7 @@ namespace TownOfUs.Patches {
                     else if (role.Value == RoleEnum.Executioner) {playerRole += "<color=#"+Patches.Colors.Executioner.ToHtmlStringRGBA()+">Executioner</color> > ";}
                     else if (role.Value == RoleEnum.Glitch) {playerRole += "<color=#"+Patches.Colors.Glitch.ToHtmlStringRGBA()+">Glitch</color> > ";}
                     else if (role.Value == RoleEnum.Jester) {playerRole += "<color=#"+Patches.Colors.Jester.ToHtmlStringRGBA()+">Jester</color> > ";}
-                   // else if (role.Value == RoleEnum.Vulture) {playerRole += "<color=#"+Patches.Colors.Executioner.ToHtmlStringRGBA()+">Vulture</color> > ";}                    
+                    else if (role.Value == RoleEnum.Vulture) {playerRole += "<color=#"+Patches.Colors.Executioner.ToHtmlStringRGBA()+">Vulture</color> > ";}                    
                     else if (role.Value == RoleEnum.Phantom) {playerRole += "<color=#"+Patches.Colors.Phantom.ToHtmlStringRGBA()+">Phantom</color> > ";}
                     else if (role.Value == RoleEnum.Grenadier) {playerRole += "<color=#"+Patches.Colors.Impostor.ToHtmlStringRGBA()+">Grenadier</color> > ";}
                     else if (role.Value == RoleEnum.Janitor) {playerRole += "<color=#"+Patches.Colors.Impostor.ToHtmlStringRGBA()+">Janitor</color> > ";}

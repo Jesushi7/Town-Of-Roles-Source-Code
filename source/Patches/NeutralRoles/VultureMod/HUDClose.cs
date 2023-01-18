@@ -1,4 +1,4 @@
-/*using HarmonyLib;
+using HarmonyLib;
 using Object = UnityEngine.Object;
 using System;
 using TownOfUs.Roles;
@@ -21,4 +21,4 @@ namespace TownOfUs.NeutralRoles.VultureMod
             }
         }
     }
-}*/
+}

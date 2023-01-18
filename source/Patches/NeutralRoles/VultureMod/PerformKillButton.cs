@@ -1,4 +1,4 @@
-/*using System;
+using System;
 using HarmonyLib;
 using Hazel;
 using Reactor.Utilities;
@@ -63,4 +63,4 @@ namespace TownOfUs.NeutralRoles.VultureMod
             }
     }
 }
-}*/
+}

@@ -1,4 +1,4 @@
-/*using System.Collections;
+using System.Collections;
 using TownOfUs.CustomOption;
 using TownOfUs.Extensions;
 using UnityEngine;
@@ -42,4 +42,4 @@ namespace TownOfUs.Roles.NeutralRoles.VultureMod
             }
         }
     }
-}*/
+}

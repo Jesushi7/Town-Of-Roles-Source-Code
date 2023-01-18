@@ -1,4 +1,4 @@
-/*using System.Linq;
+using System.Linq;
 using HarmonyLib;
 using TownOfUs.Extensions;
 using UnityEngine;
@@ -31,4 +31,4 @@ namespace TownOfUs.NeutralRoles.VultureMod
             text.text = $"<size=4>{text.text}</size>";
         }
     }
-}*/
+}

@@ -24,7 +24,7 @@ namespace TownOfUs
     {
         public static int MayorOn => (int)Generate.MayorOn.Get();
         public static int JesterOn => (int)Generate.JesterOn.Get();
-      //  public static int VultureOn => (int)Generate.VultureOn.Get();
+        public static int VultureOn => (int)Generate.VultureOn.Get();
         public static int SheriffOn => (int)Generate.SheriffOn.Get();
         public static int JanitorOn => (int)Generate.JanitorOn.Get();
         public static int EngineerOn => (int)Generate.EngineerOn.Get();
@@ -90,10 +90,10 @@ namespace TownOfUs
         public static bool SheriffKillsWerewolf => Generate.SheriffKillsWerewolf.Get();
         public static bool SheriffKillsPlaguebearer => Generate.SheriffKillsPlaguebearer.Get();
         public static float SheriffKillCd => Generate.SheriffKillCd.Get();
-    //    public static float VultureCd => Generate.VultureCd.Get();
-      //  public static float VultureBodies => Generate.VultureBodies.Get();
-//        public static bool EatArrows => Generate.EatArrows.Get();
-      //  public static float EatArrowDelay => Generate.EatArrowDelay.Get();
+       public static float VultureCd => Generate.VultureCd.Get();
+      public static float VultureBodies => Generate.VultureBodies.Get();
+      public static bool EatArrows => Generate.EatArrows.Get();
+      public static float EatArrowDelay => Generate.EatArrowDelay.Get();
         public static int MayorVoteBank => (int)Generate.MayorVoteBank.Get();
         public static bool MayorAnonymous => Generate.MayorAnonymous.Get();
         public static bool SwapperButton => Generate.SwapperButton.Get();

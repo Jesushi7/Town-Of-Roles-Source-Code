@@ -494,8 +494,8 @@ namespace TownOfUs.CustomOption
                 PercentFormat);
             PhantomOn = new CustomNumberOption(true, num++, MultiMenu.neutral, "<color=#662962FF>Phantom</color>", 0f, 0f, 100f, 10f,
                 PercentFormat);
-           /* VultureOn = new CustomNumberOption(true, num++, MultiMenu.neutral, "<color=#69460a>Vulture</color>", 0f, 0f, 100f, 10f,
-                PercentFormat);*/
+            VultureOn = new CustomNumberOption(true, num++, MultiMenu.neutral, "<color=#69460a>Vulture</color>", 0f, 0f, 100f, 10f,
+                PercentFormat);
 
 
             NeutralKillingRoles = new CustomHeaderOption(num++, MultiMenu.neutral, "Neutral Killing Roles");
@@ -928,7 +928,7 @@ namespace TownOfUs.CustomOption
             PhantomTasksRemaining =
                  new CustomNumberOption(num++, MultiMenu.neutral, "Tasks Remaining When Phantom Can Be Clicked", 5, 1, 15, 1);
             
-          /*  Vulture =
+            Vulture =
                 new CustomHeaderOption(num++, MultiMenu.neutral, "<color=#69460a>Vulture</color>");
             VultureCd =
                 new CustomNumberOption(num++, MultiMenu.neutral, "Vulture Eat Cooldown", 25f, 10f, 60f, 2.5f, CooldownFormat);
@@ -938,7 +938,7 @@ namespace TownOfUs.CustomOption
                 new CustomToggleOption(num++, MultiMenu.neutral, "Vulture Has Arrows To Bodies", false);
         EatArrowDelay =
                 new CustomNumberOption(num++, MultiMenu.neutral, "Arrow Delay", 5f, 0f, 15f, 1f, CooldownFormat);
-            */
+            
 
             Arsonist = new CustomHeaderOption(num++, MultiMenu.neutral, "<color=#FF4D00FF>Arsonist</color>");
             DouseCooldown =

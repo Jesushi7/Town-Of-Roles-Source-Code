@@ -1,4 +1,4 @@
-/*using HarmonyLib;
+using HarmonyLib;
 using TownOfUs.Roles;
 using UnityEngine;
 
@@ -36,4 +36,4 @@ namespace TownOfUs.NeutralRoles.VultureMod
             __instance.graphic.material.SetFloat("_Desat", 1f);
         }
     }
-}*/
+}
