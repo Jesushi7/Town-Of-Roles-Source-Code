@@ -1028,7 +1028,7 @@ namespace TownOfUs.CustomOption
             PoisonDuration =
                 new CustomNumberOption(num++, MultiMenu.imposter, "Bite Kill Delay", 5f, 1f, 15f, 1f, CooldownFormat);
             PoisonerVent =
-                new CustomToggleOption(num++, MultiMenu.imposter, "Vampire Can Vent", false);
+                new CustomToggleOption(num++, MultiMenu.imposter, "Vampire Can Use Vent", false);
 
             Traitor = new CustomHeaderOption(num++, MultiMenu.imposter, "<color=#FF0000FF>Traitor</color>");
             LatestSpawn = new CustomNumberOption(num++, MultiMenu.imposter, "Minimum People Alive When Traitor Can Spawn", 5, 3, 15, 1);
