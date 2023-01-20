@@ -59,13 +59,16 @@ namespace TownOfUs.Roles
             LostByRPC = true;
         }
 
-        public float KillTimer()
+public float KillTimer()
         {
             var utcNow = DateTime.UtcNow;
             var timeSpan = utcNow - LastKill;
-            var num = (CustomGameOptions.GlitchKillCooldown + 5.0f - 5.0f * JuggKills) * 1000f;
+            var num = (CustomGameOptions.JuggKillCooldown - CustomGameOptions.JuggKillBonus * JuggKills) * 1000f;
             var flag2 = num - (float)timeSpan.TotalMilliseconds < 0f;
-            if (flag2) return 0;
+
+            if (flag2)
+                return 0;
+
             return (num - (float)timeSpan.TotalMilliseconds) / 1000f;
         }
 

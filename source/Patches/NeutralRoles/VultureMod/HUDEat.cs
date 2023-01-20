@@ -39,7 +39,7 @@ namespace TownOfUs.NeutralRoles.VultureMod
             }
 
             role.EatButton.GetComponent<AspectPosition>().Update();
-            role.EatButton.graphic.sprite = TownOfUs.JanitorClean;
+            role.EatButton.graphic.sprite = TownOfUs.VultureEat;
             role.EatButton.gameObject.SetActive(!MeetingHud.Instance && !PlayerControl.LocalPlayer.Data.IsDead);
 
             var data = PlayerControl.LocalPlayer.Data;

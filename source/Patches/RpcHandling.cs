@@ -1008,14 +1008,13 @@ namespace TownOfUs
                         var deads = Object.FindObjectsOfType<DeadBody>();
 
                         foreach (var body in deads)
-                        {
                             if (body.ParentId == readByte)
-                                Coroutines.Start(Eat.EatCoroutine(body, vulturerole));
-                        }
+                                Coroutines.Start(Coroutine2.EatCoroutine(body, vulturerole));
+                        
 
                         vulturerole.LastEaten = DateTime.UtcNow;
                         break;
-
+                
                     case CustomRPC.VultureWin:
                         var thevulturerole = Role.AllRoles.FirstOrDefault(x => x.RoleType == RoleEnum.Vulture);
                         ((Vulture)thevulturerole).Wins();
@@ -1025,7 +1024,7 @@ namespace TownOfUs
                         foreach (var role in Role.AllRoles)
                             if (role.RoleType == RoleEnum.Vulture)
                                 ((Vulture)role).Loses();
-
+                
                         break;                   
                     case CustomRPC.Infect:
                         Role.GetRole<Plaguebearer>(Utils.PlayerById(reader.ReadByte())).InfectedPlayers.Add(reader.ReadByte());
@@ -1401,6 +1400,8 @@ namespace TownOfUs
 
                     if (CustomGameOptions.ArsonistOn > 0)
                         NeutralKillingRoles.Add((typeof(Arsonist), CustomRPC.SetArsonist, CustomGameOptions.ArsonistOn, true));
+                    if (CustomGameOptions.JuggernautOn > 0)
+                        NeutralKillingRoles.Add((typeof(Juggernaut), CustomRPC.SetJuggernaut, CustomGameOptions.JuggernautOn, true));
 
                     if (CustomGameOptions.PlaguebearerOn > 0)
                         NeutralKillingRoles.Add((typeof(Plaguebearer), CustomRPC.SetPlaguebearer, CustomGameOptions.PlaguebearerOn, true));
@@ -1476,6 +1477,9 @@ namespace TownOfUs
 
                     if (Check(CustomGameOptions.RadarOn))
                         GlobalModifiers.Add((typeof(Radar), CustomRPC.SetRadar, CustomGameOptions.RadarOn));
+
+                    if (Check(CustomGameOptions.DrunkOn))
+                        CrewmateModifiers.Add((typeof(Drunk), CustomRPC.SetDrunk, CustomGameOptions.DrunkOn));
                     #endregion
                     #region Impostor Modifiers
                     if (Check(CustomGameOptions.DisperserOn) && PlayerControl.GameOptions.MapId != 4 && PlayerControl.GameOptions.MapId != 5)

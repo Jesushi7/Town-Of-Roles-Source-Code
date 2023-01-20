@@ -26,7 +26,7 @@ namespace TownOfUs
 
                 foreach (var option in CustomOption.CustomOption.AllOptions)
                 {
-                    if (option.Name == "Crewmate Investigative Roles")
+                    if (option.Name == "<color=#8BFDFDFF>Crewmate</color> Investigative Roles")
                     {
                         builder.Append("(Scroll for all settings)");
                         builder.AppendLine("");

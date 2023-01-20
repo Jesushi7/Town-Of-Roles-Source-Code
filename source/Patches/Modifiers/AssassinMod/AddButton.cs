@@ -162,8 +162,8 @@ namespace TownOfUs.Modifiers.AssassinMod
                 var toDie = playerRole.Name == currentGuess ? playerRole.Player : role.Player;
                 if (CustomGameOptions.AssassinSnitchViaCrewmate)
                     if (playerModifier != null)
-                        toDie = (playerRole.Name == currentGuess || playerRole.Name == "Snitch" && currentGuess == "Crewmate" || playerModifier.Name == currentGuess) ? playerRole.Player : role.Player;
-                    else toDie = (playerRole.Name == currentGuess || playerRole.Name == "Snitch" && currentGuess == "Crewmate") ? playerRole.Player : role.Player;
+                        toDie = (playerRole.Name == currentGuess || playerRole.Name == "Informant" && currentGuess == "Crewmate" || playerModifier.Name == currentGuess) ? playerRole.Player : role.Player;
+                    else toDie = (playerRole.Name == currentGuess || playerRole.Name == "Informant" && currentGuess == "Crewmate") ? playerRole.Player : role.Player;
                 else
                     if (playerModifier != null)
                         toDie = (playerRole.Name == currentGuess || playerModifier.Name == currentGuess) ? playerRole.Player : role.Player;

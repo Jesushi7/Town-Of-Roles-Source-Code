@@ -33,6 +33,7 @@ namespace TownOfUs
         public const int MaxImpostors = 62;
         
         public static Sprite JanitorClean;
+        public static Sprite VultureEat;
         public static Sprite EngineerFix;
         public static Sprite SwapperSwitch;
         public static Sprite SwapperSwitchDisabled;
@@ -112,6 +113,7 @@ namespace TownOfUs
             Generate.GenerateAll();
 
             JanitorClean = CreateSprite("TownOfUs.Resources.Janitor.png");
+            VultureEat = CreateSprite("TownOfUs.Resources.VultureEat.png");            
             EngineerFix = CreateSprite("TownOfUs.Resources.Engineer.png");
             SwapperSwitch = CreateSprite("TownOfUs.Resources.SwapperSwitch.png");
             SwapperSwitchDisabled = CreateSprite("TownOfUs.Resources.SwapperSwitchDisabled.png");

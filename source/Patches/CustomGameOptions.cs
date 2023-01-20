@@ -35,6 +35,10 @@ namespace TownOfUs
         public static int MedicOn => (int)Generate.MedicOn.Get();
         public static int SeerOn => (int)Generate.SeerOn.Get();
         public static int GlitchOn => (int)Generate.GlitchOn.Get();
+        public static int JuggernautOn => (int)Generate.JuggernautOn.Get();
+        public static float JuggKillBonus => Generate.JuggKillBonus.Get();
+        public static bool JuggVent => Generate.JuggVent.Get();
+        public static float JuggKillCooldown => Generate.JuggKillCooldown.Get();
         public static int MorphlingOn => (int)Generate.MorphlingOn.Get();
         public static int ExecutionerOn => (int)Generate.ExecutionerOn.Get();
         public static int SpyOn => (int)Generate.SpyOn.Get();
