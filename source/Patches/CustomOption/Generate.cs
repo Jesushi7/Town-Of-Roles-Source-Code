@@ -469,17 +469,16 @@ namespace TownOfUs.CustomOption
             VigilanteOn = new CustomNumberOption(true, num++, MultiMenu.crewmate, "<color=#FFFF99FF>Gambler</color>", 0f, 0f, 100f, 10f,
                 PercentFormat);
 
-            CrewProtectiveRoles = new CustomHeaderOption(num++, MultiMenu.crewmate, "<color=#8BFDFDFF>Crewmate</color> Protective Roles");
-            AltruistOn = new CustomNumberOption(true, num++, MultiMenu.crewmate, "<color=#660000FF>Altruist</color>", 0f, 0f, 100f, 10f,
-                PercentFormat);
-            MedicOn = new CustomNumberOption(true, num++, MultiMenu.crewmate, "<color=#006600FF>Medic</color>", 0f, 0f, 100f, 10f,
-                PercentFormat);
 
             CrewSupportRoles = new CustomHeaderOption(num++, MultiMenu.crewmate, "<color=#8BFDFDFF>Crewmate</color> Support Roles");
             EngineerOn = new CustomNumberOption(true, num++, MultiMenu.crewmate, "<color=#FFA60AFF>Engineer</color>", 0f, 0f, 100f, 10f,
                 PercentFormat);
             MediumOn = new CustomNumberOption(true, num++, MultiMenu.crewmate, "<color=#A680FFFF>Medium</color>", 0f, 0f, 100f, 10f,
                 PercentFormat);
+            AltruistOn = new CustomNumberOption(true, num++, MultiMenu.crewmate, "<color=#660000FF>Altruist</color>", 0f, 0f, 100f, 10f,
+                PercentFormat);
+            MedicOn = new CustomNumberOption(true, num++, MultiMenu.crewmate, "<color=#006600FF>Medic</color>", 0f, 0f, 100f, 10f,
+                PercentFormat);                
 
             CrewChaosRoles = new CustomHeaderOption(num++, MultiMenu.crewmate, "<color=#8BFDFDFF>Crewmate</color> Chaos Roles");
             MayorOn = new CustomNumberOption(true, num++, MultiMenu.crewmate, "<color=#704FA8FF>Mayor</color>", 0f, 0f, 100f, 10f,
@@ -780,17 +779,17 @@ namespace TownOfUs.CustomOption
             SheriffKillsJester =
                 new CustomToggleOption(num++, MultiMenu.crewmate, "<color=#FFFF00FF>Sheriff</color> Kills Jester", false);
             SheriffKillsGlitch =
-                new CustomToggleOption(num++, MultiMenu.crewmate, "<color=#FFFF00FF>Sheriff</color> Kills Glitch", false);
+                new CustomToggleOption(num++, MultiMenu.crewmate, "<color=#FFFF00FF>Sheriff</color> Kills <color=#00FF00FF>Glitch</color>", false);
             SheriffKillsExecutioner =
                 new CustomToggleOption(num++, MultiMenu.crewmate, "<color=#FFFF00FF>Sheriff</color> Kills <color=#8C4005FF>Executioner</color>", false);
             SheriffKillsArsonist =
                 new CustomToggleOption(num++, MultiMenu.crewmate, "<color=#FFFF00FF>Sheriff</color> Kills <color=#FF4D00FF>Arsonist</color>", false);
             SheriffKillsPyromaniac =
-                new CustomToggleOption(num++, MultiMenu.crewmate, "<color=#FFFF00FF>Sheriff</color> Kills Pyromaniac", false);
+                new CustomToggleOption(num++, MultiMenu.crewmate, "<color=#FFFF00FF>Sheriff</color> Kills <color=#e89d51>Pyromaniac</color>", false);
             SheriffKillsWerewolf =
-                new CustomToggleOption(num++, MultiMenu.crewmate, "<color=#FFFF00FF>Sheriff</color> Kills Werewolf", false);
+                new CustomToggleOption(num++, MultiMenu.crewmate, "<color=#FFFF00FF>Sheriff</color> Kills <color=#A86629FF>Werewolf</color>", false);
             SheriffKillsPlaguebearer =
-                new CustomToggleOption(num++, MultiMenu.crewmate, "<color=#FFFF00FF>Sheriff</color> Kills Plaguebearer", false);
+                new CustomToggleOption(num++, MultiMenu.crewmate, "<color=#FFFF00FF>Sheriff</color> Kills <color=#E6FFB3FF>Plaguebearer</color>", false);
             SheriffKillCd =
                 new CustomNumberOption(num++, MultiMenu.crewmate, "<color=#FFFF00FF>Sheriff</color> Kill Cooldown", 25f, 10f, 40f, 2.5f, CooldownFormat);
             SheriffBodyReport = new CustomToggleOption(num++, MultiMenu.crewmate, "<color=#FFFF00FF>Sheriff</color> Can Report Who They've Killed");
@@ -814,28 +813,6 @@ namespace TownOfUs.CustomOption
             VigilanteGuessLovers = new CustomToggleOption(num++, MultiMenu.crewmate, "<color=#FFFF99FF>Gambler</color> Can Guess Modifiers", false);
             VigilanteAfterVoting = new CustomToggleOption(num++, MultiMenu.crewmate, "<color=#FFFF99FF>Gambler</color> Can Guess After Voting", false);
 
-            Altruist = new CustomHeaderOption(num++, MultiMenu.crewmate, "<color=#660000FF>Altruist</color>");
-            ReviveDuration =
-                new CustomNumberOption(num++, MultiMenu.crewmate, "<color=#660000FF>Altruist</color> Revive Duration", 10f, 1f, 15f, 1f, CooldownFormat);
-            AltruistTargetBody =
-                new CustomToggleOption(num++, MultiMenu.crewmate, "Target's Body Disappears On Beginning Of Revive", false);
-
-            Medic =
-                new CustomHeaderOption(num++, MultiMenu.crewmate, "<color=#006600FF>Medic</color>");
-            ShowShielded =
-                new CustomStringOption(num++, MultiMenu.crewmate, "Show Shielded Player",
-                    new[] { "Self", "<color=#006600FF>Medic</color>", "Self+<color=#006600FF>Medic</color>", "Everyone" });
-            WhoGetsNotification =
-                new CustomStringOption(num++, MultiMenu.crewmate, "Who Gets Murder Attempt Indicator",
-                    new[] { "<color=#006600FF>Medic</color>", "Shielded", "Everyone", "Nobody" });
-            ShieldBreaks = new CustomToggleOption(num++, MultiMenu.crewmate, "Shield Breaks On Murder Attempt", false);
-            MedicReportSwitch = new CustomToggleOption(num++, MultiMenu.crewmate, "Show <color=#006600FF>Medic</color> Reports");
-            MedicReportNameDuration =
-                new CustomNumberOption(num++, MultiMenu.crewmate, "Time Where <color=#006600FF>Medic</color> Will Have Name", 0f, 0f, 60f, 2.5f,
-                    CooldownFormat);
-            MedicReportColorDuration =
-                new CustomNumberOption(num++, MultiMenu.crewmate, "Time Where <color=#006600FF>Medic</color> Will Have Color Type", 15f, 0f, 60f, 2.5f,
-                    CooldownFormat);
 
             Engineer =
                 new CustomHeaderOption(num++, MultiMenu.crewmate, "<color=#FFA60AFF>Engineer</color>");
@@ -859,6 +836,29 @@ namespace TownOfUs.CustomOption
                 new CustomToggleOption(num++, MultiMenu.crewmate, "Reveal The <color=#A680FFFF>Medium</color> To The Mediate Target", true);
             DeadRevealed =
                 new CustomStringOption(num++, MultiMenu.crewmate, "Who Is Revealed With Mediate", new[] { "Oldest Dead", "Newest Dead", "All Dead" });
+            
+            Altruist = new CustomHeaderOption(num++, MultiMenu.crewmate, "<color=#660000FF>Altruist</color>");
+            ReviveDuration =
+                new CustomNumberOption(num++, MultiMenu.crewmate, "<color=#660000FF>Altruist</color> Revive Duration", 10f, 1f, 15f, 1f, CooldownFormat);
+            AltruistTargetBody =
+                new CustomToggleOption(num++, MultiMenu.crewmate, "Target's Body Disappears On Beginning Of Revive", false);
+
+            Medic =
+                new CustomHeaderOption(num++, MultiMenu.crewmate, "<color=#006600FF>Medic</color>");
+            ShowShielded =
+                new CustomStringOption(num++, MultiMenu.crewmate, "Show Shielded Player",
+                    new[] { "Self", "<color=#006600FF>Medic</color>", "Self+<color=#006600FF>Medic</color>", "Everyone" });
+            WhoGetsNotification =
+                new CustomStringOption(num++, MultiMenu.crewmate, "Who Gets Murder Attempt Indicator",
+                    new[] { "<color=#006600FF>Medic</color>", "Shielded", "Everyone", "Nobody" });
+            ShieldBreaks = new CustomToggleOption(num++, MultiMenu.crewmate, "Shield Breaks On Murder Attempt", false);
+            MedicReportSwitch = new CustomToggleOption(num++, MultiMenu.crewmate, "Show <color=#006600FF>Medic</color> Reports");
+            MedicReportNameDuration =
+                new CustomNumberOption(num++, MultiMenu.crewmate, "Time Where <color=#006600FF>Medic</color> Will Have Name", 0f, 0f, 60f, 2.5f,
+                    CooldownFormat);
+            MedicReportColorDuration =
+                new CustomNumberOption(num++, MultiMenu.crewmate, "Time Where <color=#006600FF>Medic</color> Will Have Color Type", 15f, 0f, 60f, 2.5f,
+                    CooldownFormat);
 
             Swapper =
                 new CustomHeaderOption(num++, MultiMenu.crewmate, "<color=#66E666FF>Swapper</color>");
@@ -902,8 +902,8 @@ namespace TownOfUs.CustomOption
                 new CustomNumberOption(num++, MultiMenu.neutral, "Maximum Number Of Protects", 5, 1, 15, 1);
             ShowProtect =
                 new CustomStringOption(num++, MultiMenu.neutral, "Show Protected Player",
-                    new[] { "Self", "Guardian Angel", "Self+GA", "Everyone" });
-            GaOnTargetDeath = new CustomStringOption(num++, MultiMenu.neutral, "GA Becomes On Target Dead",
+                    new[] { "Self", "<color=#B3FFFFFF>GA</color>", "Self+<color=#B3FFFFFF>GA</color>", "Everyone" });
+            GaOnTargetDeath = new CustomStringOption(num++, MultiMenu.neutral, "<color=#B3FFFFFF>Guardian Angel</color> Becomes On Target Dead",
                 new[] { "Crew", "Amnesiac", "Survivor", "Jester" });
             GATargetKnows =
                 new CustomToggleOption(num++, MultiMenu.neutral, "Target Knows <color=#B3FFFFFF>Guardian Angel</color> Exists", false);
@@ -964,7 +964,7 @@ namespace TownOfUs.CustomOption
             GasolineCd =
                new CustomNumberOption(num++, MultiMenu.neutral, "<color=#e89d51>Pyromaniac</color> Gasoline Cooldown", 25f, 10f, 60f, 2.5f, CooldownFormat);
             PyromaniacEndGame =
-            VultureVent = 
+            PyromaniacEndGame = 
                 new CustomToggleOption(num++, MultiMenu.neutral, "<color=#e89d51>Pyromaniac</color> Keeps The Game Going When They are Alive", false);
     
 
