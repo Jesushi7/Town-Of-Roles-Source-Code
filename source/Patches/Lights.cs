@@ -37,6 +37,7 @@ namespace TownOfUs
                 return;
             }
 
+
             SetLights(Role.GetRole(PlayerControl.LocalPlayer).Color);
         }
     }
