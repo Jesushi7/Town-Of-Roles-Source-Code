@@ -2399,6 +2399,31 @@
       "id": "standard0059",
       "name": "Squint Hat",
       "artist": "Jesushi"
-    }                                                       
+    },
+    {
+      "id": "standard0060",
+      "name": "Head Of Hearts Hat",
+      "artist": "Jesushi"
+    },
+    {
+      "id": "standard0061",
+      "name": "Alien Hat",
+      "artist": "Jesushi"
+    },
+    {
+      "id": "standard0062",
+      "name": "Foxy Hat",
+      "artist": "Jesushi"
+    },
+    {
+      "id": "standard0063",
+      "name": "Uh Hat",
+      "artist": "Jesushi"
+    },
+    {
+      "id": "standard0064",
+      "name": "JellyFish Hat",
+      "artist": "Jesushi"
+    }                                                                                 
   ]
 }
