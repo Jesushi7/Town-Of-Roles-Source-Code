@@ -1,6 +1,5 @@
 using HarmonyLib;
 using Hazel;
-using TownOfUs.Patches;
 using TownOfUs.Roles;
 
 namespace TownOfUs.NeutralRoles.VultureMod
@@ -10,18 +9,17 @@ namespace TownOfUs.NeutralRoles.VultureMod
     {
         public static bool Prefix(ShipStatus __instance, [HarmonyArgument(0)] GameOverReason reason)
         {
-            if (reason != GameOverReason.HumansByVote && reason != GameOverReason.HumansByTask)
-                return true;
-
-            foreach (var role in Role.AllRoles)
+            foreach (Vulture vult in Role.GetRoles(RoleEnum.Vulture))
             {
-                if (role.RoleType == RoleEnum.Vulture)
-                    ((Vulture) role).Loses();
+                if (vult.EatNeed == 0)
+                {
+                    vult.Loses();
+                    var writer = AmongUsClient.Instance.StartRpcImmediately(PlayerControl.LocalPlayer.NetId, (byte) CustomRPC.VultureWin, SendOption.Reliable, -1);
+                    writer.Write((byte)CustomRPC.VultureLose);
+                    writer.Write(vult.Player.PlayerId);
+                    AmongUsClient.Instance.FinishRpcImmediately(writer);
+                }
             }
-
-            var writer = AmongUsClient.Instance.StartRpcImmediately(PlayerControl.LocalPlayer.NetId, (byte) CustomRPC.VultureLose,
-                SendOption.Reliable, -1);
-            AmongUsClient.Instance.FinishRpcImmediately(writer);
 
             return true;
         }

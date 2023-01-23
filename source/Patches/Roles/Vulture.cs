@@ -36,10 +36,10 @@ namespace TownOfUs.Roles
             if (Player.Data.IsDead || Player.Data.Disconnected)
                 return true;
 
-            else if (EatNeed == 0)
+            else if (EatNeed < 0)
             {
                 var writer = AmongUsClient.Instance.StartRpcImmediately(PlayerControl.LocalPlayer.NetId, (byte) CustomRPC.VultureWin,
-                    SendOption.Reliable, -1);
+                SendOption.Reliable, -1);
                 writer.Write(Player.PlayerId);
                 Wins();
                 AmongUsClient.Instance.FinishRpcImmediately(writer);

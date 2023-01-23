@@ -60,6 +60,7 @@ namespace TownOfUs.Roles.Modifiers
                 if (CustomGameOptions.ExecutionerOn > 0) ColorMapping.Add("Executioner", Colors.Executioner);
                 if (CustomGameOptions.JesterOn > 0 || (CustomGameOptions.ExecutionerOn > 0 && CustomGameOptions.OnTargetDead == OnTargetDead.Jester) || (CustomGameOptions.GuardianAngelOn > 0 && CustomGameOptions.GaOnTargetDeath == BecomeOptions.Jester)) ColorMapping.Add("Jester", Colors.Jester);
                 if (CustomGameOptions.VultureOn > 0) ColorMapping.Add("Vulture", Colors.Executioner);
+                if (CustomGameOptions.PyromaniacOn > 0) ColorMapping.Add("Pyromaniac", Colors.Pyromaniac);                
             }
             if (CustomGameOptions.AssassinGuessNeutralKilling)
             {

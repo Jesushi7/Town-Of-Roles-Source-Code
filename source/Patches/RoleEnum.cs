@@ -15,6 +15,7 @@ namespace TownOfUs
         Spy,
         Snitch,
         Arsonist,
+        Pyromaniac,
         Altruist,
         Phantom,
         Vigilante,

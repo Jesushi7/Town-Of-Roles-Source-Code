@@ -106,6 +106,7 @@ namespace TownOfUs.NeutralRoles.AmnesiacMod
                 case RoleEnum.Vulture:
                 case RoleEnum.Executioner:
                 case RoleEnum.Arsonist:
+                case RoleEnum.Pyromaniac:                
                 case RoleEnum.Amnesiac:
                 case RoleEnum.Glitch:
                 case RoleEnum.Juggernaut:
@@ -319,6 +320,13 @@ namespace TownOfUs.NeutralRoles.AmnesiacMod
                 arsoRole.DousedPlayers.RemoveRange(0, arsoRole.DousedPlayers.Count);
                 arsoRole.LastDoused = DateTime.UtcNow;
             }
+            else if (role == RoleEnum.Pyromaniac)
+            {
+                var Pyromaniacrole = Role.GetRole<Pyromaniac>(amnesiac);
+                Pyromaniacrole.DousedPlayers.RemoveRange(0, Pyromaniacrole.DousedPlayers.Count);
+                Pyromaniacrole.LastDoused = DateTime.UtcNow;
+            }
+
 
             else if (role == RoleEnum.Survivor)
             {

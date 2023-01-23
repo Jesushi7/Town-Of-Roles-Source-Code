@@ -27,7 +27,7 @@ namespace TownOfUs
     public class TownOfUs : BasePlugin
     {
         public const string Id = "com.slushiegoose.townofus";
-        public const string VersionString = "1.0.0";
+        public const string VersionString = "1.1.0";
         public static System.Version Version = System.Version.Parse(VersionString);
         public const int MaxPlayers = 127;
         public const int MaxImpostors = 62;

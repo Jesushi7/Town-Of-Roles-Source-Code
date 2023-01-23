@@ -611,6 +611,10 @@ namespace TownOfUs
             {
                 role.LastDoused = DateTime.UtcNow;
             }
+            foreach (Pyromaniac role in Role.GetRoles(RoleEnum.Pyromaniac))
+            {
+                role.LastDoused = DateTime.UtcNow;
+            }            
             foreach (Glitch role in Role.GetRoles(RoleEnum.Glitch))
             {
                 role.LastHack = DateTime.UtcNow;

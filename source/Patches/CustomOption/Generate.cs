@@ -43,6 +43,7 @@ namespace TownOfUs.CustomOption
         public static CustomNumberOption JesterOn;
         public static CustomNumberOption PhantomOn;
         public static CustomNumberOption VultureOn;
+        public static CustomNumberOption PyromaniacOn;
 
         public static CustomHeaderOption NeutralKillingRoles;
         public static CustomNumberOption ArsonistOn;
@@ -158,6 +159,7 @@ namespace TownOfUs.CustomOption
         public static CustomToggleOption SheriffKillsGlitch;
         public static CustomToggleOption SheriffKillsExecutioner;
         public static CustomToggleOption SheriffKillsArsonist;
+        public static CustomToggleOption SheriffKillsPyromaniac;
         public static CustomToggleOption SheriffKillsWerewolf;
         public static CustomToggleOption SheriffKillsPlaguebearer;
         public static CustomNumberOption SheriffKillCd;
@@ -216,6 +218,11 @@ namespace TownOfUs.CustomOption
         public static CustomNumberOption VultureBodies;
         public static CustomToggleOption EatArrows;
         public static CustomNumberOption EatArrowDelay;
+        public static CustomToggleOption VultureVent;
+
+        public static CustomHeaderOption Pyromaniac;
+        public static CustomNumberOption GasolineCd;
+        public static CustomToggleOption PyromaniacEndGame;
 
         public static CustomHeaderOption TheGlitch;
         public static CustomNumberOption MimicCooldownOption;
@@ -502,7 +509,8 @@ namespace TownOfUs.CustomOption
                 PercentFormat);
             VultureOn = new CustomNumberOption(true, num++, MultiMenu.neutral, "<color=#69460a>Vulture</color>", 0f, 0f, 100f, 10f,
                 PercentFormat);
-
+            PyromaniacOn = new CustomNumberOption(true, num++, MultiMenu.neutral, "<color=#e89d51>Pyromaniac</color>", 0f, 0f, 100f, 10f,
+                PercentFormat);
 
             NeutralKillingRoles = new CustomHeaderOption(num++, MultiMenu.neutral, "<color=#45a85e>Neutral</color> <color=#FF0000FF>Killing</color> Roles");
             ArsonistOn = new CustomNumberOption(true, num++, MultiMenu.neutral, "<color=#FF4D00FF>Arsonist</color>", 0f, 0f, 100f, 10f,
@@ -674,7 +682,7 @@ namespace TownOfUs.CustomOption
             AssassinSnitchViaCrewmate = new CustomToggleOption(num++, MultiMenu.imposter, "<color=#FF0000FF>Assassin</color> Informant Via \"Crewmate\" Guess", false);
             AssassinGuessNeutralBenign = new CustomToggleOption(num++, MultiMenu.imposter, "<color=#FF0000FF>Assassin</color> Can Guess <color=#45a85e>Neutral</color> Benign Roles", false);
             AssassinGuessNeutralEvil = new CustomToggleOption(num++, MultiMenu.imposter, "<color=#FF0000FF>Assassin</color> Can Guess <color=#45a85e>Neutral</color> Evil Roles", false);
-            AssassinGuessNeutralKilling = new CustomToggleOption(num++, MultiMenu.imposter, "<color=#FF0000FF>Assassin</color> Can Guess <color=45a85e>Neutral</color> <color=#FF0000FF>Killing</color> Roles", false);
+            AssassinGuessNeutralKilling = new CustomToggleOption(num++, MultiMenu.imposter, "<color=#FF0000FF>Assassin</color> Can Guess <color=#45a85e>Neutral</color> <color=#FF0000FF>Killing</color> Roles", false);
             AssassinGuessImpostors = new CustomToggleOption(num++, MultiMenu.imposter, "<color=#45a85e>Neutral</color> <color=#FF0000FF>Assassin</color> Can Guess <color=#FF0000FF>Impostor</color> Roles", false);
             AssassinGuessModifiers = new CustomToggleOption(num++, MultiMenu.imposter, "<color=#FF0000FF>Assassin</color> Can Guess Some Modifiers", false);
             AssassinGuessLovers = new CustomToggleOption(num++, MultiMenu.imposter, "<color=#FF0000FF>Assassin</color> Can Guess <color=#FF66CCFF>Lovers</color>", false);
@@ -777,6 +785,8 @@ namespace TownOfUs.CustomOption
                 new CustomToggleOption(num++, MultiMenu.crewmate, "<color=#FFFF00FF>Sheriff</color> Kills <color=#8C4005FF>Executioner</color>", false);
             SheriffKillsArsonist =
                 new CustomToggleOption(num++, MultiMenu.crewmate, "<color=#FFFF00FF>Sheriff</color> Kills <color=#FF4D00FF>Arsonist</color>", false);
+            SheriffKillsPyromaniac =
+                new CustomToggleOption(num++, MultiMenu.crewmate, "<color=#FFFF00FF>Sheriff</color> Kills Pyromaniac", false);
             SheriffKillsWerewolf =
                 new CustomToggleOption(num++, MultiMenu.crewmate, "<color=#FFFF00FF>Sheriff</color> Kills Werewolf", false);
             SheriffKillsPlaguebearer =
@@ -942,11 +952,21 @@ namespace TownOfUs.CustomOption
                 new CustomNumberOption(num++, MultiMenu.neutral, "<color=#69460a>Vulture</color> Eat Cooldown", 25f, 10f, 60f, 2.5f, CooldownFormat);
             VultureBodies =
                 new CustomNumberOption(num++, MultiMenu.neutral, "Number Of Bodies That Needs To Eat",5, 1, 15, 1);
-         EatArrows =
+            EatArrows =
                 new CustomToggleOption(num++, MultiMenu.neutral, "<color=#69460a>Vulture</color> Has Arrows To Bodies", false);
-        EatArrowDelay =
+            EatArrowDelay =
                 new CustomNumberOption(num++, MultiMenu.neutral, "Arrow Delay", 5f, 0f, 15f, 1f, CooldownFormat);
+            VultureVent = 
+                new CustomToggleOption(num++, MultiMenu.neutral, "<color=#69460a>Vulture</color> Can Vent", false);
             
+            Pyromaniac =
+               new CustomHeaderOption(num++, MultiMenu.neutral, "<color=#e89d51>Pyromaniac</color>");
+            GasolineCd =
+               new CustomNumberOption(num++, MultiMenu.neutral, "<color=#e89d51>Pyromaniac</color> Gasoline Cooldown", 25f, 10f, 60f, 2.5f, CooldownFormat);
+            PyromaniacEndGame =
+            VultureVent = 
+                new CustomToggleOption(num++, MultiMenu.neutral, "<color=#e89d51>Pyromaniac</color> Keeps The Game Going When They are Alive", false);
+    
 
             Arsonist = new CustomHeaderOption(num++, MultiMenu.neutral, "<color=#FF4D00FF>Arsonist</color>");
             DouseCooldown =

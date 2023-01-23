@@ -16,6 +16,7 @@ namespace TownOfUs
     public class KillButtonSprite
     {
         private static Sprite Rewind => TownOfUs.Rewind;
+        private static Sprite VultureEat => TownOfUs.VultureEat;        
         private static Sprite Medic => TownOfUs.MedicSprite;
         private static Sprite Seer => TownOfUs.SeerSprite;
         private static Sprite Douse => TownOfUs.DouseSprite;
@@ -51,6 +52,11 @@ namespace TownOfUs
                 __instance.KillButton.graphic.sprite = Seer;
                 flag = true;
             }
+            else if (PlayerControl.LocalPlayer.Is(RoleEnum.Vulture))
+            {
+                __instance.KillButton.graphic.sprite = VultureEat;
+                flag = true;
+            }            
             else if (PlayerControl.LocalPlayer.Is(RoleEnum.Medic))
             {
                 __instance.KillButton.graphic.sprite = Medic;
@@ -61,6 +67,11 @@ namespace TownOfUs
                 __instance.KillButton.graphic.sprite = Douse;
                 flag = true;
             }
+            else if (PlayerControl.LocalPlayer.Is(RoleEnum.Pyromaniac))
+            {
+                __instance.KillButton.graphic.sprite = Douse;
+                flag = true;
+            }            
             else if (PlayerControl.LocalPlayer.Is(RoleEnum.Altruist))
             {
                 __instance.KillButton.graphic.sprite = Revive;

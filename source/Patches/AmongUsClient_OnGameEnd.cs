@@ -80,11 +80,11 @@ namespace TownOfUs
                         return;
                     }
                 }
-                /*else if (type == RoleEnum.Vulture)
+                else if (type == RoleEnum.Vulture)
                 {
                     var vulture = (Vulture)role;
 
-                    if (vulture.EatNeed == 0)
+                    if (vulture.EatNeed <= 0)
                     {
                         var winners = Utils.potentialWinners.Where(x => x.PlayerName == vulture.PlayerName).ToList();
                         foreach (var role2 in Role.GetRoles(RoleEnum.Survivor))
@@ -99,7 +99,7 @@ namespace TownOfUs
                         foreach (var win in winners) TempData.winners.Add(win);
                         return;
                     }
-                }*/
+                }
             }
             foreach (var role in Role.AllRoles)
             {
@@ -219,6 +219,17 @@ namespace TownOfUs
                         return;
                     }
                 }
+                else if (type == RoleEnum.Pyromaniac)
+                {
+                    var pyromaniac = (Pyromaniac)role;
+                    if (pyromaniac.PyromaniacWins)
+                    {
+                        var winners = Utils.potentialWinners.Where(x => x.PlayerName == pyromaniac.PlayerName).ToList();
+                        TempData.winners = new List<WinningPlayerData>();
+                        foreach (var win in winners) TempData.winners.Add(win);
+                        return;
+                    }
+                }                
                 else if (type == RoleEnum.Phantom)
                 {
                     var phantom = (Phantom)role;

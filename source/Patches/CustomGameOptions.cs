@@ -46,6 +46,7 @@ namespace TownOfUs
         public static int MinerOn => (int)Generate.MinerOn.Get();
         public static int SwooperOn => (int)Generate.SwooperOn.Get();
         public static int ArsonistOn => (int)Generate.ArsonistOn.Get();
+        public static int PyromaniacOn => (int)Generate.PyromaniacOn.Get();        
         public static int AltruistOn => (int)Generate.AltruistOn.Get();
         public static int UndertakerOn => (int)Generate.UndertakerOn.Get();
         public static int PhantomOn => (int)Generate.PhantomOn.Get();
@@ -91,6 +92,7 @@ namespace TownOfUs
         public static bool SheriffKillsGlitch => Generate.SheriffKillsGlitch.Get();
         public static bool SheriffKillsExecutioner => Generate.SheriffKillsExecutioner.Get();
         public static bool SheriffKillsArsonist => Generate.SheriffKillsArsonist.Get();
+        public static bool SheriffKillsPyromaniac => Generate.SheriffKillsPyromaniac.Get();        
         public static bool SheriffKillsWerewolf => Generate.SheriffKillsWerewolf.Get();
         public static bool SheriffKillsPlaguebearer => Generate.SheriffKillsPlaguebearer.Get();
         public static float SheriffKillCd => Generate.SheriffKillCd.Get();
@@ -98,6 +100,7 @@ namespace TownOfUs
       public static float VultureBodies => Generate.VultureBodies.Get();
       public static bool EatArrows => Generate.EatArrows.Get();
       public static float EatArrowDelay => Generate.EatArrowDelay.Get();
+      public static bool VultureVent => Generate.VultureVent.Get();
         public static int MayorVoteBank => (int)Generate.MayorVoteBank.Get();
         public static bool MayorAnonymous => Generate.MayorAnonymous.Get();
         public static bool SwapperButton => Generate.SwapperButton.Get();
@@ -166,6 +169,8 @@ namespace TownOfUs
         public static int MaxDoused => (int)Generate.MaxDoused.Get();
         public static bool ArsoImpVision => Generate.ArsoImpVision.Get();
         public static bool IgniteCdRemoved => Generate.IgniteCdRemoved.Get();
+        public static bool PyromaniacEndGame => Generate.PyromaniacEndGame.Get(); 
+        public static float GasolineCd => Generate.GasolineCd.Get();       
         public static int MinNeutralNonKillingRoles => (int)Generate.MinNeutralNonKillingRoles.Get();
         public static int MaxNeutralNonKillingRoles => (int)Generate.MaxNeutralNonKillingRoles.Get();
         public static int MinNeutralKillingRoles => (int)Generate.MinNeutralKillingRoles.Get();

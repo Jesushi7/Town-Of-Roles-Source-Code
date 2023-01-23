@@ -954,6 +954,34 @@ namespace TownOfUs
                             if (role.RoleType == RoleEnum.Arsonist)
                                 ((Arsonist) role).Loses();
                         break;
+                
+                    case CustomRPC.SetPyromaniac:
+                        new Arsonist(Utils.PlayerById(reader.ReadByte()));
+                        break;
+                    case CustomRPC.Gasoline:
+                        var pyromaniac = Utils.PlayerById(reader.ReadByte());
+                        var douseTarget2 = Utils.PlayerById(reader.ReadByte());
+                        var Pyromaniacrole = Role.GetRole<Pyromaniac>(pyromaniac);
+                        Pyromaniacrole.DousedPlayers.Add(douseTarget2.PlayerId);
+                        Pyromaniacrole.LastDoused = DateTime.UtcNow;
+
+                        break;
+                    case CustomRPC.Explode:
+                        var thePyromaniac = Utils.PlayerById(reader.ReadByte());
+                        var thePyromaniacRole = Role.GetRole<Pyromaniac>(thePyromaniac);
+                        global::TownOfUs.NeutralRoles.PyromaniacMod.PerformKill.Ignite(thePyromaniacRole);
+                        break;
+
+                    case CustomRPC.PyromaniacWin:
+                        var thePyromaniacTheRole = Role.AllRoles.FirstOrDefault(x => x.RoleType == RoleEnum.Pyromaniac);
+                        ((Pyromaniac) thePyromaniacTheRole)?.Wins();
+                        break;
+                    case CustomRPC.PyromaniacLose:
+                        foreach (var role in Role.AllRoles)
+                            if (role.RoleType == RoleEnum.Pyromaniac)
+                                ((Pyromaniac) role).Loses();
+
+                        break;                        
                     case CustomRPC.WerewolfWin:
                         var theWerewolfTheRole = Role.AllRoles.FirstOrDefault(x => x.RoleType == RoleEnum.Werewolf);
                         ((Werewolf)theWerewolfTheRole)?.Wins();
@@ -1008,13 +1036,14 @@ namespace TownOfUs
                         var deads = Object.FindObjectsOfType<DeadBody>();
 
                         foreach (var body in deads)
+                        {
                             if (body.ParentId == readByte)
                                 Coroutines.Start(Coroutine2.EatCoroutine(body, vulturerole));
-                        
+                        }
 
                         vulturerole.LastEaten = DateTime.UtcNow;
                         break;
-                
+
                     case CustomRPC.VultureWin:
                         var thevulturerole = Role.AllRoles.FirstOrDefault(x => x.RoleType == RoleEnum.Vulture);
                         ((Vulture)thevulturerole).Wins();
@@ -1024,7 +1053,7 @@ namespace TownOfUs
                         foreach (var role in Role.AllRoles)
                             if (role.RoleType == RoleEnum.Vulture)
                                 ((Vulture)role).Loses();
-                
+
                         break;                   
                     case CustomRPC.Infect:
                         Role.GetRole<Plaguebearer>(Utils.PlayerById(reader.ReadByte())).InfectedPlayers.Add(reader.ReadByte());
@@ -1388,6 +1417,9 @@ namespace TownOfUs
 
                     if (CustomGameOptions.ExecutionerOn > 0)
                         NeutralNonKillingRoles.Add((typeof(Executioner), CustomRPC.SetExecutioner, CustomGameOptions.ExecutionerOn, false));
+
+                    if (CustomGameOptions.PyromaniacOn > 0)
+                        NeutralNonKillingRoles.Add((typeof(Pyromaniac), CustomRPC.SetPyromaniac, CustomGameOptions.PyromaniacOn, false));
 
                     if (CustomGameOptions.SurvivorOn > 0)
                         NeutralNonKillingRoles.Add((typeof(Survivor), CustomRPC.SetSurvivor, CustomGameOptions.SurvivorOn, false));
