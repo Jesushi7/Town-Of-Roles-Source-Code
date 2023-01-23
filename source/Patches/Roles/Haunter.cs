@@ -21,7 +21,7 @@ namespace TownOfUs.Roles
         {
             Name = "Haunter";
             ImpostorText = () => "";
-            TaskText = () => "Complete all your tasks to reveal impostors!";
+            TaskText = () => "Complete all your tasks to reveal impostors to everyone!";
             Color = Patches.Colors.Haunter;
             RoleType = RoleEnum.Haunter;
             AddToRoleHistory(RoleType);
